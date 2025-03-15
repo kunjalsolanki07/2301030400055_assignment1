@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - 🌟 Amazing Science Kids</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #fdecd2;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-bottom: 2px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .header h1 span {
+            color: blue;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff7b00;
+        }
+
+        /* Payment Container */
+        .payment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
+        }
+
+        /* Left Section - Illustration */
+        .payment-left {
+            width: 50%;
+            background-image: url('img/image\ \(4\).png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border-radius: 10px;
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out; */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Right Section - Payment Form */
+        .payment-right {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .payment-right h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Payment Options */
+        .payment-options {
+            margin-top: 20px;
+        }
+
+        .option {
+            background: #f4f4f4;
+            padding: 12px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background: #007BFF;
+            color: white;
+        }
+
+        .option i {
+            font-size: 18px;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .payment-methods img {
+            width: 40px;
+            transition: 0.3s;
+        }
+
+        .payment-methods img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Back Button */
+        .back-btn {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: blue;
+        }
+
+        @media (max-width: 768px) {
+            .payment-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .payment-left {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🌟<span>Amazing</span> Science <span>Kids</span></h1>
+        <div class="nav-links">
+            <a href="#">Home Page</a>
+            <a href="#">Project</a>
+            <a href="#">Videos</a>
+            <a href="#">STEP Guides</a>
+            <a href="#">Safety Tips</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="payment-container">
+        
+        <!-- Left Side (Illustration) -->
+        <div class="payment-left">
+            <!-- Background image for decoration -->
+    
+        </div>
+
+        <!-- Right Side (Payment Options) -->
+        <div class="payment-right">
+            <h2><i class="fas fa-qrcode"><img src="img/image 3 (2).png" alt=""></i> Show QR CODE ✅</h2>
+            <p>Scan with Any UPI app</p>
+
+            <div class="payment-options">
+                <div class="option"><span>UPI ID</span> <i class="fas fa-circle"></i></div>
+                <div class="option"><span>Card</span> <i class="fas fa-circle"></i></div>
+                <div class="option"><span>Net Banking</span> <i class="fas fa-circle"></i></div>
+            </div>
+
+            <div class="qr-code">
+                <img src="img/image 3 (2).png" alt="QR Code">
+            </div>
+
+            <span>Powered by: </span>
+            <div class="payment-methods">
+                <img src="img/icons8-google-pay-48.png" alt="GPay">
+                <img src="img/icons8-paytm-48.png" alt="Paytm">
+                <img src="img/phonepe.svg" alt="PhonePe">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+    <i class="fas fa-arrow-left"></i>  Back
+    </div>
+
+</body>
+</html>

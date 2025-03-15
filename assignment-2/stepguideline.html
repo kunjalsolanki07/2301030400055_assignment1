@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Amazing Science Kids - Projects</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: whitesmoke;
+            border-bottom: 2px solid #af2727;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .header h1 span {
+            color: blue;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff7b00;
+        }
+
+        /* Project Cards */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            cursor: pointer;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h2 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* Card Colors */
+        .green { background: #4CAF50; }
+        .blue { background: #2196F3; }
+        .orange { background: #FF9800; }
+        .purple { background: #9C27B0; }
+        .lightblue { background: #64B5F6; }
+        .lightgreen { background: #66BB6A; }
+
+        /* Back Button */
+        .back-btn {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: blue;
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🌟<span>Amazing</span> Science <span>Kids</span></h1>
+        <div class="nav-links">
+            <a href="#">Home Page</a>
+            <a href="#">Project</a>
+            <a href="#">Videos</a>
+            <a href="#">STEP Guides</a>
+            <a href="#">Safety Tips</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects-container">
+        
+        <div class="project-card green">
+           <a href="safetytips.html"> <h2>1. Candle Water Experiment</h2></a>
+            <p><b>Goal:</b> Demonstrate how water is drawn up by a burning candle.</p>
+            <ul>
+                <li>Materials: Candle, dish, glass jar, match, water.</li>
+                <li>Steps: Light the candle, place it in the dish, cover with the jar, and watch water rise.</li>
+                <li><b>Safety Tip:</b> Always have an adult light the candle.</li>
+                <li><b>Fun Tip:</b> Ask, “Why does the water rise?”</li>
+            </ul>
+        </div>
+
+        <div class="project-card blue">
+            <a href="safetytips.html"><h2>2. Bridge Strength Project</h2></a>
+            <p><b>Goal:</b> Test how much weight a popsicle stick bridge can hold.</p>
+            <ul>
+                <li>Materials: Popsicle sticks, glue, ruler, toy or small book.</li>
+                <li>Steps: Build a bridge, then test how much weight it holds.</li>
+                <li><b>Safety Tip:</b> Be careful with glue, let it dry fully.</li>
+                <li><b>Fun Tip:</b> Challenge kids to make the bridge stronger!</li>
+            </ul>
+        </div>
+
+        <div class="project-card orange">
+            <h2>3. Water Cycle Model</h2>
+            <p><b>Goal:</b> Show the water cycle (evaporation, condensation, precipitation).</p>
+            <ul>
+                <li>Materials: Clear cup, warm water, plastic wrap, rubber band.</li>
+                <li>Steps: Fill the cup with warm water, cover with plastic wrap, and place it in the sun.</li>
+                <li><b>Safety Tip:</b> Use warm water carefully.</li>
+                <li><b>Fun Tip:</b> Ask, “What happens to the water inside the cup?”</li>
+            </ul>
+        </div>
+
+        <div class="project-card purple">
+            <h2>4. Solar System Model</h2>
+            <p><b>Goal:</b> Create a model of the solar system.</p>
+            <ul>
+                <li>Materials: Styrofoam balls, paint, string, poster board.</li>
+                <li>Steps: Paint the balls to represent planets and hang them in order.</li>
+                <li><b>Safety Tip:</b> Ask an adult for help with cutting the string.</li>
+                <li><b>Fun Tip:</b> Kids can color the planets however they like!</li>
+            </ul>
+        </div>
+
+        <div class="project-card lightblue">
+            <h2>5. Blooming Flower Art</h2>
+            <p><b>Goal:</b> Create a flower that "blooms" with paper folding.</p>
+            <ul>
+                <li>Materials: Colored paper, scissors, glue.</li>
+                <li>Steps: Cut and fold paper petals to form a flower.</li>
+                <li><b>Safety Tip:</b> Be careful with scissors.</li>
+                <li><b>Fun Tip:</b> Let kids experiment with different colors and shapes.</li>
+            </ul>
+        </div>
+
+        <div class="project-card lightgreen">
+            <h2>6. Water Cycle School Project</h2>
+            <p><b>Goal:</b> Create a simple water cycle model.</p>
+            <ul>
+                <li>Materials: Clear container, food coloring, plastic wrap, small plant.</li>
+                <li>Steps: Add water to the container, cover with plastic wrap, and watch the cycle happen.</li>
+                <li><b>Safety Tip:</b> Supervise when handling the setup.</li>
+                <li><b>Fun Tip:</b> Ask, “What do you think happens to the water in the wrap?”</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back
+    </div>
+
+</body>
+</html>

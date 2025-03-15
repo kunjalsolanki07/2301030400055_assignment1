@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - 🌟 Amazing Science Kids</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-bottom: 2px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .header h1 span {
+            color: blue;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff7b00;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
+        }
+
+        /* Left Section */
+        .profile-left {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .profile-left img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #007BFF;
+        }
+
+        .profile-left h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-info input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .save-btn {
+            background: #ddd;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .save-btn:hover {
+            background: #007BFF;
+            color: white;
+        }
+
+        /* Right Section */
+        .profile-right {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .profile-right img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-right h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .profile-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-item {
+            background: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu-item i {
+            font-size: 18px;
+        }
+
+        .menu-item:hover {
+            background: #007BFF;
+            color: white;
+        }
+
+        /* Back Button */
+        .back-btn {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: blue;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🌟<span>Amazing</span> Science <span>Kids</span></h1>
+        <div class="nav-links">
+            <a href="welcome.html">Home Page</a>
+            <a href="diytools.html">Project</a>
+            <a href="video.html">Videos</a>
+            <a href="stepguideline.html">STEP Guides</a>
+            <a href="safetytips.html">Safety Tips</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="aboutus.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        
+        <!-- Left Side (Editable Info) -->
+        <div class="profile-left">
+            <img src="img/profilephoto.jpg" alt="Profile Picture">
+            <h2>Kunjal Solanki</h2>
+            <div class="profile-info">
+                <input type="text" value="Full Name">
+                <input type="email" value="E-Mail">
+                <input type="password" value="Password">
+                <input type="text" value="Phone Number">
+            </div>
+            <button class="save-btn">Save Changes</button>
+        </div>
+
+        <!-- Right Side (Profile Menu) -->
+        <div class="profile-right">
+            <img src="img/profilephoto.jpg" alt="Profile Picture">
+            <h2>Kunjal Solanki</h2>
+            <div class="profile-menu">
+                <div class="menu-item"><i class="fas fa-user"></i> My Profile</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item"><i class="fas fa-bell"></i> Notifications</div>
+               <a href="welcome.html"> <div class="menu-item"><i class="fas fa-sign-out-alt"></i> Log Out</div> </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back
+    </div>
+
+</body>
+</html>

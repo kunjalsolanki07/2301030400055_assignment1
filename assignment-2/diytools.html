@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Amazing Science Kids - Whiteboard</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f4f4f4;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #e0e0e0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+            animation: slideInLeft 0.7s ease-in-out;
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Search Box */
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding-left: 8px;
+            font-size: 14px;
+        }
+
+        .search-box i {
+            color: gray;
+        }
+
+        /* Tool List */
+        .tools {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tools li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tools li:hover {
+            background: lightgray;
+        }
+
+        .tools i {
+            margin-right: 10px;
+        }
+
+        /* Sticky Notes */
+        .sticky-notes {
+            margin-top: 20px;
+        }
+
+        .sticky-colors {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sticky {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sticky:hover {
+            transform: scale(1.1);
+        }
+
+        .yellow { background: #ffd700; }
+        .blue { background: #5643fa; }
+        .black { background: #000; }
+
+        /* Back Button */
+        .back-btn {
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .back-btn i {
+            font-size: 22px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .header h1 span {
+            color: blue;
+        }
+
+        .header .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile button {
+            padding: 6px 12px;
+            border: none;
+            background: gray;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .user-profile button:hover {
+            background: darkgray;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background: #eee;
+        }
+
+        .toolbar i {
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px;
+            transition: 0.3s;
+        }
+
+        .toolbar i:hover {
+            color: blue;
+            transform: scale(1.1);
+        }
+
+        /* Whiteboard */
+        .whiteboard {
+            flex: 1;
+            margin: 10px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 14px;
+            background: #eee;
+        }
+
+        .footer i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Search For Tools</h2>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search For Tools">
+        </div>
+
+        <ul class="tools">
+            <li><i class="fas fa-square"></i> Rectangle</li>
+            <li><i class="fas fa-minus"></i> Line</li>
+            <li><i class="fas fa-arrow-right"></i> Arrow</li>
+            <li><i class="far fa-circle"></i> Ellipse</li>
+            <li><i class="fas fa-draw-polygon"></i> Polygon</li>
+            <li><i class="fas fa-image"></i> Image/Video</li>
+            <li><i class="fas fa-folder-open"></i> Projects</li>
+        </ul>
+
+        <div class="sticky-notes">
+            <h2>Sticky Notes</h2>
+            <div class="sticky-colors">
+                <div class="sticky yellow"></div>
+                <div class="sticky blue"></div>
+                <div class="sticky black"></div>
+            </div>
+        </div>
+
+        <div class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🌟<span>Amazing</span> Science <span>Kids</span></h1>
+            <div class="user-profile">
+              <a href="payments.html">>  <button>Share</button></a>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <i class="fas fa-undo"></i>
+            <i class="fas fa-redo"></i>
+            <i class="fas fa-bookmark"></i>
+        </div>
+
+        <!-- Whiteboard -->
+        <div class="whiteboard"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><i class="fas fa-sticky-note"></i> NOTES</p>
+            <p><i class="fas fa-clock"></i> Timer</p>
+            <p>Page 1/1</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
